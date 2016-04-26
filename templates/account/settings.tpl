@@ -29,7 +29,7 @@
 				</div>
 				<div id="homePageCustom" class="form-group" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
-					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}" />
+					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" />
 					<p class="help-block">[[user:custom_route_help]]</p>
 				</div>
 			</div>
@@ -139,6 +139,15 @@
 					<label>
 						<input type="checkbox" data-property="notificationSounds" <!-- IF settings.notificationSounds -->checked<!-- ENDIF settings.notificationSounds -->> <strong>[[user:notification_sounds]]</strong>
 					</label>
+				</div>
+
+				<div class="form-group">
+					<label>[[user:notification_upvote_setting]]</label>
+					<select class="form-control" data-property="upvoteNotifications">
+						<!-- BEGIN upvoteNotificationOptions -->
+						<option value="{upvoteNotificationOptions.value}" <!-- IF upvoteNotificationOptions.selected -->selected<!-- ENDIF upvoteNotificationOptions.selected -->>{upvoteNotificationOptions.name}</option>
+						<!-- END upvoteNotificationOptions -->
+					</select>
 				</div>
 			</div>
 
